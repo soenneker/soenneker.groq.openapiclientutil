@@ -44,8 +44,8 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Kiota.GenericAuthenticationProvider" Version="4.0.38" />
-        <PackageReference Include="Soenneker.Groq.HttpClients" Version="4.0.12" />
+        <PackageReference Include="Soenneker.Groq.HttpClients" Version="4.0.15" />
         <PackageReference Include="Soenneker.Groq.OpenApiClient" Version="4.0.7" />
-        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.819" />
+        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.820" />
     </ItemGroup>
 </Project>
