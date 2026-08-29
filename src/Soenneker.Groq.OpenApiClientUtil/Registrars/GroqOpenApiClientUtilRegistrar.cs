@@ -13,6 +13,8 @@ public static class GroqOpenApiClientUtilRegistrar
     /// <summary>
     /// Adds <see cref="GroqOpenApiClientUtil"/> as a singleton service. <para/>
     /// </summary>
+    /// <param name="services">Service collection that receives the registration.</param>
+    /// <returns>The same service collection, so additional registrations can be chained.</returns>
     public static IServiceCollection AddGroqOpenApiClientUtilAsSingleton(this IServiceCollection services)
     {
         services.AddGroqOpenApiHttpClientAsSingleton()
@@ -24,6 +26,8 @@ public static class GroqOpenApiClientUtilRegistrar
     /// <summary>
     /// Adds <see cref="GroqOpenApiClientUtil"/> as a scoped service. <para/>
     /// </summary>
+    /// <param name="services">Service collection that receives the registration.</param>
+    /// <returns>The same service collection, so additional registrations can be chained.</returns>
     public static IServiceCollection AddGroqOpenApiClientUtilAsScoped(this IServiceCollection services)
     {
         services.AddGroqOpenApiHttpClientAsSingleton()
