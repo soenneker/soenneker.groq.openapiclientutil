@@ -2,17 +2,18 @@ using Soenneker.Groq.OpenApiClient;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+
 namespace Soenneker.Groq.OpenApiClientUtil.Abstract;
 
 /// <summary>
-/// Exposes a cached OpenAPI client instance.
+/// Provides a lazily created Groq OpenAPI client over the shared Groq HTTP client.
 /// </summary>
-public interface IGroqOpenApiClientUtil: IDisposable, IAsyncDisposable
+public interface IGroqOpenApiClientUtil : IDisposable, IAsyncDisposable
 {
     /// <summary>
-    /// Returns the configured groq OpenAPI Client used by the Groq OpenAPI Client.
+    /// Gets the configured client, creating it on the first call.
     /// </summary>
     /// <param name="cancellationToken">Token used to cancel the operation.</param>
-    /// <returns>A task whose result is the requested groq OpenAPI Client.</returns>
+    /// <returns>The client cached for this utility's lifetime.</returns>
     ValueTask<GroqOpenApiClient> Get(CancellationToken cancellationToken = default);
 }
