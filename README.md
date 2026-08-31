@@ -54,4 +54,6 @@ ListModelsResponse? result = await client.Openai.V1.Models.GetAsync(
 
 Repeated and concurrent `Get()` calls on the same utility reuse one lazily initialized generated client. Cancellation can stop first-time initialization; pass a cancellation token separately to each generated API operation.
 
-Let dependency injection dispose the utility. Do not dispose the shared `HttpClient` returned by the lower-level HTTP-client provider.
+Authentication is supplied by the underlying HTTP provider, so the Kiota adapter does not add a second authorization header.
+
+Let the service container dispose the utility. Do not dispose the shared `HttpClient` returned by the lower-level HTTP-client provider.
