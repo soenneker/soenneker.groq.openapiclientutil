@@ -11,6 +11,7 @@ using Soenneker.Utils.AsyncSingleton;
 
 namespace Soenneker.Groq.OpenApiClientUtil;
 
+/// <inheritdoc cref="IGroqOpenApiClientUtil" />
 public sealed class GroqOpenApiClientUtil : IGroqOpenApiClientUtil
 {
     private readonly AsyncSingleton<GroqOpenApiClient> _client;
