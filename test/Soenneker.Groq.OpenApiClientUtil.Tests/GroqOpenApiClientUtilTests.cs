@@ -5,6 +5,7 @@ using Soenneker.Groq.HttpClients.Abstract;
 using Soenneker.Groq.OpenApiClientUtil.Abstract;
 using Soenneker.Groq.OpenApiClientUtil.Registrars;
 using Soenneker.Tests.HostedUnit;
+using System.Threading;
 
 namespace Soenneker.Groq.OpenApiClientUtil.Tests;
 
@@ -25,7 +26,7 @@ public sealed class GroqOpenApiClientUtilTests : HostedUnitTest
     }
 
     [Test]
-    public async ValueTask Scoped_utility_keeps_http_client_singleton()
+    public async ValueTask Scoped_utility_keeps_http_client_singleton(CancellationToken cancellationToken)
     {
         var services = new ServiceCollection();
 
