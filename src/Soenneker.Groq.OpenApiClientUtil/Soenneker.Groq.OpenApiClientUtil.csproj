@@ -47,6 +47,6 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Groq.HttpClients" Version="11.0.90" />
-        <PackageReference Include="Soenneker.Groq.OpenApiClient" Version="11.0.35" />
+        <PackageReference Include="Soenneker.Groq.OpenApiClient" Version="11.0.36" />
     </ItemGroup>
 </Project>
